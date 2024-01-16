@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+.header {
+  grid-area: header;
+  background-color: #f1f1f1;
+
+  text-align: center;
+ 
+}
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'left middle middle middle middle right' 
+    'footer footer footer footer footer footer';
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+} 
+
+.left,
+.middle,
+.right {
+  padding: 10px;
+  background-color: rgba(246, 91, 2, 0.466)
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+}
+
+/* Style the middle column */
+.middle {
+  grid-area: middle;
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+}
+
+/* Style the footer */
+.footer {
+  grid-area: footer;
+  background-color: #042350;
+  text-align: center;
+  border: 2px solid black;
+  color: #f1f1f1;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+      'header header header header header header' 
+      'left left left left left left' 
+      'middle middle middle middle middle middle' 
+      'right right right right right right' 
+      'footer footer footer footer footer footer';
+  }
+}
+.Outside-head {text-align: center; color: rgb(246, 92, 2); border: 1px solid black;}
+.Outside-p {text-align:center; color: white ;}
+.middle h2 {text-align: center ;}
+.middle p {font-size: larger;}
+.middle a {color:#01256F ;}
+
+li {display: inline-block;
+padding: 15px;
+margin: 15px;
+list-style-type: none;
+background-color:rgb(9, 53, 119) ;
+}
+a {color: #f1f1f1;}
+a:hover {color: rgb(246, 92, 2) ;}
+body {background-color: #042350;}
+strong:hover {color:#01256F; font-weight: bolder}
+b:hover {color:#01256F; font-weight: bolder}
+h2:hover {color:#01256F}
+.footer h2:hover {color: rgb(246, 92, 2);}
+.footer strong:hover {color: rgb(246, 92, 2);}
+
